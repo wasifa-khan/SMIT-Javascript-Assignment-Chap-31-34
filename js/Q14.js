@@ -1,0 +1,15 @@
+const customerName = "Wasfa Khan";
+const currentMonth = "July";
+const numberOfUnits = 268;
+const chargesPerUnit = 12.5;
+const netAmountPayable = (numberOfUnits * chargesPerUnit).toFixed(2);
+const latePaymentSurcharge = (netAmountPayable * 0.05).toFixed(2);
+const grossAmountPayable = (parseFloat(netAmountPayable) + parseFloat(latePaymentSurcharge)).toFixed(2);
+document.write("<h2>K-Electric Bill</h2>");
+document.write("<strong>Customer Name:</strong> " + customerName + "<br>");
+document.write("<strong>Current Month:</strong> " + currentMonth + "<br>");
+document.write("<strong>Number of units:</strong> " + numberOfUnits + "<br>");
+document.write("<strong>Charges per unit:</strong> " + chargesPerUnit.toFixed(2) + "<br>");
+document.write("<strong>Net Amount Payable (within Due Date):</strong> $" + netAmountPayable + "<br>");
+document.write("<strong>Late Payment Surcharge:</strong> $" + latePaymentSurcharge + "<br>");
+document.write("<strong>Gross Amount Payable (after Due Date):</strong> $" + grossAmountPayable + "<br>");
